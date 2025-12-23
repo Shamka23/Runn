@@ -7,7 +7,7 @@ public class Main {
         System.out.println(digitsCount(-12345));
     }
 
-    public static long sumToN(int number){
+    private static long sumToN(int number){
         int sum = 0;
         for (int i = 1; i <= number; i++) {
             sum += i;
@@ -15,7 +15,7 @@ public class Main {
         return sum;
     }
 
-    public static String mulRow(int number){
+    private static String mulRow(int number){
         StringBuilder sb = new StringBuilder();
         for (int i = 1; i <= 10 ; i++) {
             sb.append(number).append(" * ").append(i).append(" = ").append(number * i).append("\n");
@@ -23,7 +23,7 @@ public class Main {
         return sb.toString();
     }
 
-    public static int digitsCount(int number) {
+    private static int digitsCount(int number) {
         number = Math.abs(number);
         if(number == 0){
             return 1;
