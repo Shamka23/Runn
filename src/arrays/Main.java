@@ -1,7 +1,7 @@
 package arrays;
 
 public class Main {
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         int[] array = {5, 52, 62, 96, 8};
         int[] array2 = {4, -6, -29, 609, 203};
         System.out.println(min(array));
