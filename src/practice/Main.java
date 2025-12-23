@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         System.out.println(isStrong("1234567a"));
-        System.out.println(Arrays.toString(privatereqLowerCase("abAB!")));
+        System.out.println(Arrays.toString(charFreqLowerCase("abAB!")));
     }
 
     private static boolean isStrong(String password) {
