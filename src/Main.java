@@ -1,15 +1,27 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.time.*;
+import java.util.*;
+
+import static java.time.DayOfWeek.MONDAY;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        System.out.println(next(MONDAY));
+        System.out.println(format(LocalDate.of(2025, 11, 2)));
+    }
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+    private static DayOfWeek next(DayOfWeek day) {
+        int index = day.ordinal();
+        index += 1;
+        index = index % 7;
+        return DayOfWeek.values()[index];
+    }
+
+    private static String format(LocalDate date) {
+        return String.format(
+                "%02d.%02d.%04d",
+                date.getDayOfMonth(),
+                date.getMonthValue(),
+                date.getYear()
+        );
     }
 }
