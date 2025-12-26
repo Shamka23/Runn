@@ -1,3 +1,5 @@
+package classes;
+
 public class Rect {
 
     private final int width;
