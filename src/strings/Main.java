@@ -10,16 +10,16 @@ public class Main {
     }
 
     private static String getReverseString(String text) {
-        StringBuilder sb = new StringBuilder();
-        sb.append(text).reverse();
-        return sb.toString();
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(text).reverse();
+        return stringBuilder.toString();
     }
 
     private static String getReverseInteger(int number) {
-        StringBuilder sb = new StringBuilder();
+        StringBuilder stringBuilder = new StringBuilder();
         String text = String.valueOf(number);
-        sb.append(text).reverse();
-        return sb.toString();
+        stringBuilder.append(text).reverse();
+        return stringBuilder.toString();
     }
 
     private static boolean isPalindrome(String text) {
