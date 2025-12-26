@@ -10,9 +10,9 @@ public class Main {
 
     private static String getFirstWord(String text) {
         StringBuilder result = new StringBuilder();
-        for (char ch: text.trim().toCharArray()){
-            if(Character.isLetterOrDigit(ch)){
-                result.append(ch);
+        for (char symbol : text.trim().toCharArray()){
+            if(Character.isLetterOrDigit(symbol)){
+                result.append(symbol);
             } else break;
         }
         return result.toString();
