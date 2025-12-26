@@ -2,13 +2,13 @@ package numbers;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(sum(4, 6));
+        System.out.println(getSum(4, 6));
         System.out.println(isEven(3));
-        System.out.println(max(5, 5, 9));
-        System.out.println(convertTemperature(100));
+        System.out.println(getMax(10, 12, 9));
+        System.out.println(getFahrenheitTemp(100));
     }
 
-    private static int sum(int firstNumber, int secondNumber) {
+    private static int getSum(int firstNumber, int secondNumber) {
         return firstNumber + secondNumber;
     }
 
@@ -16,17 +16,18 @@ public class Main {
         return number % 2 == 0;
     }
 
-    private static int max(int firstNumber, int secondNumber, int thirdNumber) {
-        if (firstNumber >= secondNumber && firstNumber >= thirdNumber) {
-            return firstNumber;
-        } else if (secondNumber >= firstNumber && secondNumber >= thirdNumber) {
-            return secondNumber;
-        } else {
-            return thirdNumber;
-        }
+    private static int getMax(int firstNumber, int secondNumber, int thirdNumber) {
+        return Math.max(firstNumber, Math.max(secondNumber, thirdNumber));
+//        if (firstNumber >= secondNumber && firstNumber >= thirdNumber) {
+//            return firstNumber;
+//        } else if (secondNumber >= firstNumber && secondNumber >= thirdNumber) {
+//            return secondNumber;
+//        } else {
+//            return thirdNumber;
+//        }
     }
 
-    private static double convertTemperature(double tempC){
-        return tempC * 9/5 +32;
+    private static double getFahrenheitTemp(double tempC) {
+        return 1.8 * tempC + 32;
     }
 }
