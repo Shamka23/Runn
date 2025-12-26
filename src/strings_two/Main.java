@@ -1,4 +1,4 @@
-package strings;
+package strings_two;
 
 public class Main {
     public static void main(String[] args) {
