@@ -14,21 +14,28 @@ public class Main {
         }
         boolean hasLetter = false;
         boolean hasDigit = false;
+
         for (int i = 0; i < password.length(); i++) {
-            if (Character.isLetter(password.charAt(i))) hasLetter = true;
-            if (Character.isDigit(password.charAt(i))) hasDigit = true;
-            if (hasLetter && hasDigit) break;
+            if (Character.isLetter(password.charAt(i))) {
+                hasLetter = true;
+            }
+            if (Character.isDigit(password.charAt(i))) {
+                hasDigit = true;
+            }
+            if (hasLetter && hasDigit) {
+                break;
+            }
         }
         return hasLetter && hasDigit;
     }
 
-    private static int[] charFreqLowerCase(String word){
+    private static int[] charFreqLowerCase(String word) {
         int[] freq = new int[26];
 
-        for (char ch : word.toCharArray()) {
-            ch = Character.toLowerCase(ch);
-            if(ch >= 'a' && ch <= 'z') {
-                freq[ch - 'a']++;
+        for (char symbol : word.toCharArray()) {
+            symbol = Character.toLowerCase(symbol);
+            if (symbol >= 'a' && symbol <= 'z') {
+                freq[symbol - 'a']++;
             }
         }
         return freq;
