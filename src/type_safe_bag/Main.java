@@ -8,9 +8,9 @@ public class Main {
         bag.put(CharSequence.class, "hello");
         bag.put(String.class, "Огурец");
 
-        bag.get(Integer.class).get();      // 123
-        bag.get(String.class).isEmpty();   // true
-        bag.get(String.class).get();
+        System.out.println(bag.get(Integer.class).get());
+        System.out.println(bag.get(Integer.class).isEmpty());
+        System.out.println(bag.get(String.class).get());
 
     }
 }
